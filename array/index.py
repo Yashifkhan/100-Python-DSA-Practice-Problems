@@ -30,10 +30,32 @@
 
 # question 3 
 # Problem Description: Find the second-largest distinct element in a list of integers. Return None if fewer than
-l=[1,2,8,4,5]
-first_val=l[0]
-for i in l:
-    if i > first_val:
-        first_val=i
+# l=[1,2,8,4,5]
+# first_val=l[0]
+# for i in l:
+#     if i > first_val:
+#         first_val=i
    
-print(first_val) 
+# print(first_val) 
+
+
+
+
+l = [8]
+
+largest = l[0]
+second_largest = None
+
+for i in l:
+    if i > largest:
+        second_largest =largest
+        largest = i
+
+    elif i < largest and (
+        second_largest is None or i > second_largest
+    ):
+        # Update the second largest
+        second_largest = i
+
+print("Largest:", largest)
+print("Second largest:", second_largest)
