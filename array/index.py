@@ -41,21 +41,32 @@
 
 
 
-l = [8]
+# l = [8]
 
-largest = l[0]
-second_largest = None
+# largest = l[0]
+# second_largest = None
 
+# for i in l:
+#     if i > largest:
+#         second_largest =largest
+#         largest = i
+
+#     elif i < largest and (
+#         second_largest is None or i > second_largest
+#     ):
+#         # Update the second largest
+#         second_largest = i
+
+# print("Largest:", largest)
+# print("Second largest:", second_largest)
+
+# question 4 
+# Problem Description: Given a sorted list, remove duplicate elements in place so that each distinct element appears once. Return the number of unique elements.
+l=[1,2,3,3,4,5,6,6,18]
+new_l=[]
 for i in l:
-    if i > largest:
-        second_largest =largest
-        largest = i
-
-    elif i < largest and (
-        second_largest is None or i > second_largest
-    ):
-        # Update the second largest
-        second_largest = i
-
-print("Largest:", largest)
-print("Second largest:", second_largest)
+    if i in new_l:
+        continue
+    else:
+        new_l.append(i)
+print(new_l) 
